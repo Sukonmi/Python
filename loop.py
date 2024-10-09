@@ -25,3 +25,12 @@ while n <=20:
     print(f"n at {n} now")
     print(f"{n} is an even number")
     n = n+2
+
+guessed_password = ""
+
+while guessed_password != "hacker":
+    print("Wrong password! Try again")
+    guessed_password = input("Enter correct password: ")
+
+print("Password correct.")
+
