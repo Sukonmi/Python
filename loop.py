@@ -16,4 +16,12 @@ n = 5
 
 while n >=1:
     print(f"n at {n} now")
+    print(f"{n} is greater than or equal to 1")
     n = n-1
+
+n = 2
+
+while n <=20:
+    print(f"n at {n} now")
+    print(f"{n} is an even number")
+    n = n+2
