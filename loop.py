@@ -26,23 +26,3 @@ while n <=20:
     print(f"{n} is an even number")
     n = n+2
 
-"""
-
-guessed_password = "Ayomide"
-
-while guessed_password != "hacker":
-    guessed_password = input("Enter correct password: ")
-    print("Wrong password! {guessed_password} Try again")
-
-print("Password correct.")
-
-"""
-
-# Use a while loop that askes a user to guess an answer to a quiz queestion and the program should only run 5 times.
-#  What is the capital of lagos state. 
-answer = "Ikeja"
-
-while answer != "Ikeja":
-    answer = input("Enter your answer: ")
-    print() 
-
