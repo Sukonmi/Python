@@ -65,4 +65,7 @@ for s in students.values():
 
 for s in students.items():
     print(s)
+
+for k,v in students.items():
+    print(k,v)
     
