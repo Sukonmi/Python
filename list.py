@@ -77,7 +77,11 @@ colors.append("black")
 
 colors[1] = "Yellow"
 
-# 3c. Print the updated list.
+# 3c. insert a new color  in the index 1
+
+colors.insert(1,"Grey")
+
+# 3d. Print the updated list.
 
 print(colors)
 
@@ -94,3 +98,11 @@ numbers = [10, 20, 30, 40, 50]
 
 # 5b. slice the list to print only the first three numbers.
 print(numbers[0:3])
+
+# We use the del keyword to removes a specified index.
+
+my_list =  ['Scala', 'SQL', 'R', 'SAS', 'C++', 'php', 'html', 'Matlab']
+
+del my_list[0]      #remove the item with 0 index (python)    
+
+print(my_list)      ['Scala', 'SQL', 'R', 'SAS', 'C++', 'php', 'html', 'Matlab']
