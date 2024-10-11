@@ -62,5 +62,18 @@ print(my_dictionary)
 
 # update is used to add, update or merge an existing dictionary from another dictionary
 
+# Loop Through a Dictionary elements
 
+
+for key in my_dictionary.keys():     # Loop Through dictionary keys
+
+   print(key)
+
+for value in my_dictionary.values():    #  Loop Through dictionary values
+
+   print(value)
+
+for item in my_dictionary.items():     # Loop Through dictionary items
+
+   print(item)
 
