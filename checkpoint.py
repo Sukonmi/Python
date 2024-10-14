@@ -5,7 +5,7 @@ our_store_items = {"Mango":5,
                    "Apple":10, 
                    "Pear":4, 
                    "Pineapple":30, 
-                   "Oranges":5,
+                   "Orange":5,
                    "Banana":20,
                    "Watermelon":15,
                    "Strawberry":65,
@@ -30,15 +30,17 @@ while True:
             print(item)
         for i in range(5):
             item = input("Enter item: ").capitalize()
+            if item == "Checkout":
+                break
             if item in our_store_items:
                 if item in unique_items:
                     print(f"{item} is already in shopping list")
-                else:
+                elif item not in unique_items:
                     item_quantity = int(input(f"How many quantity of {item}?: "))
                     shopping_list.append(item)
                 unique_items.add(item)
                 items_info[item] = item_quantity
-                items_info[f"{item}_price"] = our_store_items[item]
+                items_info[f"{item}_price"] = our_store_items[item] * item_quantity
                 print(f"{item} has been added to your shopping cart")
             else:
                 print("Sorry! We do not have this currently.")
@@ -47,7 +49,7 @@ while True:
         print("Displaying items in your cart")
         if len(shopping_list) > 0:
             for item in shopping_list:
-                print(f"{item} with {items_info[item]} quanity(s) with price of {items_info[f"{item}_price"]}")
+                print(f"{item} with {items_info[item]} quanity(s) with price of {items_info[f"{item}_price"]} Naira")
         else:
             print("Your cart is empty")
     
