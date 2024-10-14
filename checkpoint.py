@@ -1,7 +1,17 @@
 shopping_list = []
 unique_items = set()
 items_info = {}
-our_store_items = {"Mango":5, "Apple":10, "Pear":4}
+our_store_items = {"Mango":5, 
+                   "Apple":10, 
+                   "Pear":4, 
+                   "Pineapple":30, 
+                   "Oranges":5,
+                   "Banana":20,
+                   "Watermelon":15,
+                   "Strawberry":65,
+                   "Blueberry":35,
+                   "Kiwi":55,
+                   "Tangerine":7}
 
 while True:
     print("""Shopping List Menu
