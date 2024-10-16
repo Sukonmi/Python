@@ -47,4 +47,14 @@ def multiplication_table(numbers,multiplier):
     for n in numbers:
         print(f"{multiplier}x{n} = {n*multiplier}")
 
-multiplication_table([1,2,3,4,5,6,7,8,9,10,11,12],1000)
+multiplication_table([1,2,3,4,5,6,7,8,9,10,11,12],12)
+
+year = lambda n: n*2
+
+print(year(5))
+
+temperature_celsius = [45, 56, 79, 102, 23, 45]
+
+temperature_fahrenheit = list(map(lambda C: (9/5)*C + 32, temperature_celsius))
+
+print(temperature_fahrenheit)
