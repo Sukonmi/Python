@@ -1,4 +1,5 @@
 # Functions helps you avoid repeating yourself.
+"""
 
 def correct_password():
     print("Your password is correct")
@@ -52,6 +53,21 @@ multiplication_table([1,2,3,4,5,6,7,8,9,10,11,12],12)
 year = lambda n: n*2
 
 print(year(5))
+
+exponential  = lambda x,y: x**y
+
+print(exponential(2,3))
+
+number = lambda n_list:n_list[-5:-1:2]
+
+print(number([1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16]))
+
+
+"""
+
+triangle_area = lambda b,h: (b*h)/2
+
+print(triangle_area(3,4))
 
 temperature_celsius = [45, 56, 79, 102, 23, 45]
 
