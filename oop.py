@@ -68,3 +68,51 @@ player1 = Player("John")
 
 # Take 20 points of damage
 print(player1.take_damage(20))
+
+class BankAccount:
+    def __init__(self, owner, phone_number, email_address, account_number, balance=0):
+        self.owner = owner
+        self.phone_number = phone_number
+        self.email_address = email_address
+        self.account_nummber = account_number
+        self.balance = balance
+
+    def deposit(self, deposit_amount):
+        self.balance += deposit_amount
+        print(f"Alert!!! {deposit_amount}Naira has been credited to your account.")
+        
+    def check_balance(self):
+        print(f"Hi {self.owner}. Your balance is: {self.balance}Naira")
+
+    def withdraw(self, withdrawal_amount):
+        self.balance -= withdrawal_amount
+        print(f"Debit Alert!!! {withdrawal_amount}Naira has been debited from your account.")
+
+    def update_acc_email(self, new_email_address):
+        self.email_address = new_email_address
+        print(f"Your Email has been updated to {new_email_address}")
+
+    def account_info(self):
+        print(f"Good day, Mr {self.owner}. \n"
+              f"These are your available information. \n"
+              f"Account number: {self.account_nummber} \n"
+              f"Phone number: {self.phone_number} \n"
+              f"Email address: {self.email_address} \n"
+              f"Account balance: {self.balance}Naira")
+
+account1 = BankAccount("Ayomide", "07067159089", "Ayo@gmail.com", "1513855560")
+
+print(f"Good Afternoon, Mr {account1.owner} "
+      f"Your account number is {account1.account_nummber} "
+      f"And your balance is {account1.balance} Naira")
+
+account1.deposit(100000)
+account1.deposit(5000)
+account1.check_balance()
+account1.deposit(2000000)
+account1.check_balance()
+account1.withdraw(150000)
+account1.check_balance()
+account1.account_info()
+account1.update_acc_email("Ayo_d@yahoomail.com")
+account1.account_info()
