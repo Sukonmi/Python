@@ -50,25 +50,6 @@ print(f"The {phone1.brand} is the most expensive phone on the list.")
 print(f"It costs {phone1.price} Naira and came out in the year {phone1.year}.")
 print(f"The {phone1.brand} uses an {phone1.operating_system} OS.")
 
-
-class Player:
-        def __init__(self, name, hp=100):
-            self.name = name
-            self.hp = hp
-        
-        def run(self):
-            return f"{self.name} is running in the game."
-        
-        def take_damage(self, damage):
-            self.hp -= damage  # Reduce hit points by damage amount
-            return f"{self.name}'s remaining HP: {self.hp}"
-
-# Create a player
-player1 = Player("John")
-
-# Take 20 points of damage
-print(player1.take_damage(20))
-
 class BankAccount:
     def __init__(self, owner, phone_number, email_address, account_number, balance=0):
         self.owner = owner
@@ -116,3 +97,39 @@ account1.check_balance()
 account1.account_info()
 account1.update_acc_email("Ayo_d@yahoomail.com")
 account1.account_info()
+
+
+class Player:
+        def __init__(self, name, hp=100):
+            self.name = name
+            self.hp = hp
+        
+        def run(self):
+            print(f"{self.name} is running in the game.")
+        
+        def take_damage(self, damage):
+            self.hp -= damage  # Reduce hit points by damage amount
+            print(f"{self.name}'s remaining HP: {self.hp}")
+            if self.hp < 20 and self.hp != 0:
+                print(f"{self.name}. Your HP: {self.hp} Get health boost to avoid death")
+            elif self.hp == 0:
+                print(f"{self.name} You are dead")
+            else:
+                pass
+
+        def recover(self, health_boost):
+            self.hp += health_boost
+            print(f"{self.name}'s new HP: {self.hp}")
+
+# Create a player
+player1 = Player("John")
+player2 = Player("Kester")
+player3 = Player("Ayomide")
+
+player1.take_damage(20)
+player2.run()
+player2.take_damage(50)
+player3.take_damage(0)
+player2.recover(10)
+player2.take_damage(50)
+player2.take_damage(10)
